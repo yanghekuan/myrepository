@@ -1,0 +1,17 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/how2j/springcloudConfig/
+          search-paths:
+          - respo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8077/eureka/
