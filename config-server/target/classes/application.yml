@@ -8,7 +8,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/how2j/springcloudConfig/
+          uri: https://github.com/yanghekuan/springcloudConfig/
           search-paths:
           - respo
 eureka:
