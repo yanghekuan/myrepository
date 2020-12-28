@@ -1,0 +1,17 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: product-service-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8077/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /api-data/**
+      service-id: PRODUCT-DATA-SERVICE
+    api-b:
+      path: /api-view/**
+      service-id: PRODUCT-VIEW-SERVICE-FEIGN

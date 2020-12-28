@@ -1,0 +1,15 @@
+server:
+  port: 8021
+spring:
+  application:
+    name: turbine
+turbine:
+  app-config: product-view-service-feign
+  aggregator:
+    cluster-config:
+    - default
+  clusterNameExpression: new String("default")
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8077/eureka/
